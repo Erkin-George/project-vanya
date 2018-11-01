@@ -1,55 +1,26 @@
-//Written by Erkin George
-console.log('Greetings!');
-const Discord = require('discord.js');
-const commando = require('discord.js-commando');
-const bot = new Discord.Client();
-var auth = require('./auth.json');
-//var server = require('./server.js');
-var http = require('http');
+const Commando = require('discord.js-commando');
+const YouTube = require('simple-youtube-api');
+const ytdl = require('ytdl-core');
+const bot = new Commando.Client();
+const TOKEN = require("./auth.json");
 
-var date = new Date();
-var day = date.getDay();
 
-bot.on('message',(message) =>{
+bot.registry.registerGroup('simple','Simple');
+bot.registry.registerGroup('timing','Timing');
+bot.registry.registerDefaults();
+bot.registry.registerCommandsIn( __dirname + '/commands');
 
-    var tempString = message.toString();
-    if(message.content == 'Salute' && message.author.id == auth.ownerID)
+
+// bot.registry.registerDefaults();
+// bot.registerCommandsIn(__dirname + '/commands');
+
+bot.login("NDE3OTUzNTgyNjY3NzkyMzk5.DrL6AA.DDvUYn5t2pqolTfOgrHpWw_Yohw");
+
+bot.on('message',function(message){
+
+    if(message.content == 'Hello' || message.content == 'hello')
     {
-        message.reply('The Supreme Dictator');
-        return;
+        message.channel.sendMessage('Hello ' + message.author + ', nice to see you here.');
     }
-    if(tempString.includes('Russia') > 0)
-    {
-        message.reply('The Motherland?');
-        return;
-    }
-    if(tempString.includes('America') > 0)
-    {
-        message.reply('Freedom!');
-        return;
-    }
-    if(tempString.substr(0,1) == '!')
-    {
-        return;
-    }
-    else if(message.author.id ==auth.ownerID)
-    {
-        //message.reply('Heed the words of your wise leader');
-        message.channel.send('Heed the words of your wise leader');
-    }
+
 });
-
-bot.on('guildMemberAdd',member =>
-{
-    // Send the message to a designated channel on a server:
-
-  const channel = member.guild.channels.find(ch => ch.name === 'member-log');
-
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Welcome to the server, ${member}`);
-});
-
-bot.login(auth.token);
-console.log("Bot has started...");

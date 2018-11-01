@@ -1,20 +1,19 @@
 {
-  "name": "vanya-bot",
+  "name": "vanyabot",
   "version": "1.0.0",
-  "description": "My Communist bot",
+  "description": "A communist bot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Erkin George",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "bufferutil": "^4.0.0",
-    "cheerio": "^1.0.0-rc.2",
     "discord.js": "^11.4.2",
     "discord.js-commando": "^0.10.0",
-    "express": "^4.16.4",
-    "expressjs": "^1.0.1",
-    "opusscript": "0.0.6"
+    "google-auth-library": "^2.0.0",
+    "googleapis": "^34.0.0",
+    "simple-youtube-api": "^5.0.2",
+    "ytdl": "^0.10.4"
   }
 }
