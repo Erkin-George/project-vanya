@@ -1,5 +1,10 @@
 const commando = require('discord.js-commando');
 
+function Play()
+{
+    
+}
+
 class JoinChannelCommand extends commando.Command
 {
     constructor(client)
@@ -20,6 +25,7 @@ class JoinChannelCommand extends commando.Command
                 message.member.voiceChannel.join()
                 .then(connection => {
                     message.message.reply("I've joined to sing!");
+                    const broadcast = connection.playFile('./music.mp3');
                 })
             }
         }

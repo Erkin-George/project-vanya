@@ -12,7 +12,7 @@ bot.registry.registerDefaults();
 bot.registry.registerCommandsIn( __dirname + '/commands');
 
 
-bot.login("NDE3OTUzNTgyNjY3NzkyMzk5.DrzsqA.tOgGsvZ7pZKYO6jbyDh_0XwkreA");
+bot.login("NDE3OTUzNTgyNjY3NzkyMzk5.DrzuSg.LN8im-6ofxaBy3C_LduLzdoh_cI");
 
 bot.on('message',function(message){
 
