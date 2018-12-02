@@ -1,7 +1,7 @@
 const commando = require('discord.js-commando');
 const YTDL = require('ytdl-core');
 
-
+//Class definition
 class Play extends commando.Command
 {
     constructor(client)
@@ -15,6 +15,7 @@ class Play extends commando.Command
         });
     }
 
+    //Play the given file hosted on the server
     async run(message, args)
     {
         if(message.guild.voiceConnection){
@@ -28,4 +29,6 @@ class Play extends commando.Command
         }
     }
 }
+
+//Sends out the result of this file to the rest of the program
 module.exports = Play;

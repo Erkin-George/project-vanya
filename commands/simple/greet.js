@@ -1,5 +1,7 @@
 const commando = require('discord.js-commando');
 
+
+//Class definition
 class Greet extends commando.Command
 {
     constructor(client)
@@ -13,9 +15,12 @@ class Greet extends commando.Command
         });
     }
 
+    //Async code that says hello
     async run(message, args)
     {
         message.reply("Hello commrade!");
     }
 }
+
+//Sends out the result of this file to the rest of the program
 module.exports = Greet;

@@ -1,5 +1,6 @@
 const commando = require('discord.js-commando');
 
+//Class definition
 class LeaveChannelCommand extends commando.Command
 {
     constructor(client)
@@ -13,6 +14,7 @@ class LeaveChannelCommand extends commando.Command
         });
     }
 
+    //Async code that disconnects the bot
     async run(message, args)
     {
         if(message.guild.voiceConnection){
@@ -23,4 +25,6 @@ class LeaveChannelCommand extends commando.Command
         }
     }
 }
+
+//Sends out the result of this file to the rest of the program
 module.exports = LeaveChannelCommand;

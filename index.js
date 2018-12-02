@@ -1,19 +1,28 @@
+//Erkin George
+//11-28-18
+
+//Libraries
 const Commando = require('discord.js-commando');
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
+
+//Creates the bot object
 const bot = new Commando.Client();
+
+//TOKEN feature to be implemented for changing servers easily
 const TOKEN = require("./auth.json");
 
-
+//Registering folders as groups with the needed files
 bot.registry.registerGroup('simple','Simple');
 bot.registry.registerGroup('timing','Timing');
 bot.registry.registerGroup('music','Music');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn( __dirname + '/commands');
 
+//Logs bot into given server
+bot.login("");
 
-bot.login("NDE3OTUzNTgyNjY3NzkyMzk5.DrzuSg.LN8im-6ofxaBy3C_LduLzdoh_cI");
-
+//Greeting code
 bot.on('message',function(message){
 
     if(message.content == 'Hello' || message.content == 'hello')

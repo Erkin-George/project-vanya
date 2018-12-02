@@ -1,5 +1,6 @@
 const commando = require('discord.js-commando');
 
+//Class definition
 function timing(message)
 {
     message.channel.sendMessage("Timer done");
@@ -16,6 +17,7 @@ class Timer extends commando.Command {
             });
     }
 
+    //Async code that runs the timer
     async run(message, args) {
 
         var channel = message.channel;
@@ -26,5 +28,5 @@ class Timer extends commando.Command {
 
 }
 
-
+//Sends out the result of this file to the rest of the program
 module.exports = Timer;

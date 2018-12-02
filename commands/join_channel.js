@@ -1,5 +1,6 @@
 const commando = require('discord.js-commando');
 
+//Class definition
 class JoinChannelCommand extends commando.Command
 {
     constructor(client)
@@ -13,6 +14,7 @@ class JoinChannelCommand extends commando.Command
         });
     }
 
+    //Async code that joins the bot to the server
     async run(message, args)
     {
         if(message.member.voiceChannel){
@@ -29,4 +31,6 @@ class JoinChannelCommand extends commando.Command
         }
     }
 }
+
+//Sends out the result of this file to the rest of the program
 module.exports = JoinChannelCommand;
