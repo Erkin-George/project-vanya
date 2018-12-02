@@ -1,5 +1,5 @@
 //Erkin George
-//11-28-18
+//12-01-18
 
 //Libraries
 const Commando = require('discord.js-commando');
@@ -22,7 +22,7 @@ bot.registry.registerCommandsIn( __dirname + '/commands');
 //Logs bot into given server
 bot.login("");
 
-//Greeting code
+//Greeting code that uses a message to parse out user input
 bot.on('message',function(message){
 
     if(message.content == 'Hello' || message.content == 'hello')

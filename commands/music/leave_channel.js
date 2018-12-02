@@ -14,7 +14,7 @@ class LeaveChannelCommand extends commando.Command
         });
     }
 
-    //Async code that disconnects the bot
+    //Async code that disconnects the bot. Takes the input from the message code to disconnect.
     async run(message, args)
     {
         if(message.guild.voiceConnection){

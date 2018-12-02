@@ -14,7 +14,7 @@ class JoinChannelCommand extends commando.Command
         });
     }
 
-    //Async code that runs the music and voice connection
+    //Async code that runs the music and voice connection. Uses message input to read the command
     async run(message, args)
     {
         if(message.member.voiceChannel){

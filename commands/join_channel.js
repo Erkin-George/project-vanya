@@ -14,7 +14,7 @@ class JoinChannelCommand extends commando.Command
         });
     }
 
-    //Async code that joins the bot to the server
+    //Async code that joins the bot to the server. Takes the message input to accept the sing command
     async run(message, args)
     {
         if(message.member.voiceChannel){

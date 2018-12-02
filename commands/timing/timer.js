@@ -17,7 +17,7 @@ class Timer extends commando.Command {
             });
     }
 
-    //Async code that runs the timer
+    //Async code that runs the timer. Uses the message to get the integer value. 
     async run(message, args) {
 
         var channel = message.channel;

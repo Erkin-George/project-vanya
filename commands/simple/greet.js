@@ -15,7 +15,7 @@ class Greet extends commando.Command
         });
     }
 
-    //Async code that says hello
+    //Async code that says hello when there is a hello message. 
     async run(message, args)
     {
         message.reply("Hello commrade!");
