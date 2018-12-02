@@ -15,7 +15,7 @@ class Play extends commando.Command
         });
     }
 
-    //Play the given file hosted on the server
+    //Play the given file hosted on the server. Plays the music based on the command. 
     async run(message, args)
     {
         if(message.guild.voiceConnection){
